@@ -1,3 +1,6 @@
+<div class="footer-houses">
+<img src="http://sibaparadeofhomes.com.user.s436.sureserver.com/wp-content/uploads/2022/11/Dark_Green_Houses.png" style="width:100%; border:0; padding:0; margin:0;">	
+</div>
 <footer id="site-footer" class="footer">
 
 <?php
@@ -17,7 +20,7 @@
 	for($i = 0; $i < $numWidgets; $i++){
 
 		if( is_active_sidebar('footer-widget-' . $widgetNum )) {
-			echo('<div id="Footer-Widget-' . $widgetNum . '" class="widget footer-widget">');
+			echo('<div id="footer-widget-' . $widgetNum . '" class="widget footer-widget">');
 			dynamic_sidebar( 'footer-widget-' . $widgetNum );
 			echo('</div>');
 			$widgetNum++;
