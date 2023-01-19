@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <?php wp_head(); ?>
 <body id="body" <?php body_class(); ?>>
 <div id="site-container" class="site-container">
