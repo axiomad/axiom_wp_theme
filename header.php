@@ -61,24 +61,23 @@ function hasScrolled() {
 
 <div id="sub-header" class="header">
 	<div class="header-nav-menu">
-<?php
-	$getSubHeaderWidgets = wp_get_sidebars_widgets();
-	$numSubHeaderWidgets = count($getSubHeaderWidgets);
+	<?php
+		$getSubHeaderWidgets = wp_get_sidebars_widgets();
+		$numSubHeaderWidgets = count($getSubHeaderWidgets);
 
-	$SubHeaderWidgetsNum = 1;
-	
-	for($i = 0; $i < $numSubHeaderWidgets; $i++){
+		$SubHeaderWidgetsNum = 1;
 
-		if( is_active_sidebar('sub-header-widget-' . $SubHeaderWidgetsNum )) {
-			echo('<div id="sub-header-widget-' . $SubHeaderWidgetsNum . '" class="widget header-widget">');
-			dynamic_sidebar( 'sub-header-widget-' . $SubHeaderWidgetsNum );
-			echo('</div>');
-			$SubHeaderWidgetsNum++;
+		for($i = 0; $i < $numSubHeaderWidgets; $i++){
+
+			if( is_active_sidebar('sub-header-widget-' . $SubHeaderWidgetsNum )) {
+				echo('<div id="sub-header-widget-' . $SubHeaderWidgetsNum . '" class="widget header-widget">');
+				dynamic_sidebar( 'sub-header-widget-' . $SubHeaderWidgetsNum );
+				echo('</div>');
+				$SubHeaderWidgetsNum++;
+			}
 		}
-	}
-?>
-</div>
-
+	?>
+	</div>
 </div>
 	
 <div id="main-header" class="header">
