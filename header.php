@@ -59,11 +59,6 @@ function hasScrolled() {
 </script>
 <header id="site-header" class="header nav-down">
 
-<div id="ad-header" class="header ad-header">
-	<div class="header-ad">
-		<a href="https://jagoehomes.com"><img src="/wp-content/uploads/2022/12/JAG2031-Parade22-WebBanner.jpeg"></a>
-	</div>
-</div>
 <div id="sub-header" class="header">
 	<div class="header-nav-menu">
 <?php
@@ -83,49 +78,7 @@ function hasScrolled() {
 	}
 ?>
 </div>
-	<div class="mobile-logo">
-	<a href="/index.php"><?php the_custom_logo(); ?></a>
-	</div>
-<?php
- if($user_ID) {
-	 $user = new WP_User($user_ID);
- ?>
-	<div class="user_info">
-	<p>Hello <?php echo $user->user_firstname; ?></p>
-	<a href="<?php echo wp_logout_url( home_url() ); ?>" title="Logout">Logout</a>
 
-	</div>
-<?php
-	 }
-?>
-		<div class="mobile-navigation-container">
-
-			<div id="hamburger" class="hamburger" onClick="showMenu();">
-				<span class="hamburger-icon"></span>
-				<span class="hamburger-icon"></span>
-				<span class="hamburger-icon"></span>
-			</div>
-
-			<div id= "mobile-navigation" class="mobile-navigation">
-
-				<div id="close" class="close" onClick="hideMenu();">X</div>
-				<div class="events-navigation">
-				<a href="/chefs-on-parade"><img src="/wp-content/uploads/2022/12/Chefs_Parade_Tab.png"></a>
-				<a href="/my-parade"><img src="/wp-content/uploads/2022/12/My_Parade_Tab.png"></a>
-				</div>
-				<?php
-					wp_nav_menu( array(
-					'menu' => 'Mobile Menu'
-					) );
-				?>
-				<hr class="nav-menu-divider">
-				<?php
-					wp_nav_menu( array(
-					'menu' => 'Top Navigation'
-					) );
-				?>
-			</div>
-		</div>
 </div>
 	
 <div id="main-header" class="header">
@@ -147,5 +100,21 @@ function hasScrolled() {
 
 
 ?>
+</div>
+<div id="mobile-menu" class="mobile-navigation-container">
+		<div id="hamburger" class="hamburger" onClick="showMenu();">
+			<span class="hamburger-icon"></span>
+			<span class="hamburger-icon"></span>
+			<span class="hamburger-icon"></span>
+		</div>
+		<div id= "mobile-navigation" class="mobile-navigation">
+			<div id="close" class="close" onClick="hideMenu();">X</div>
+				<?php
+					wp_nav_menu( array(
+						'menu' => 'Mobile Menu'
+					) );
+				?>
+			</div>
+		</div>
 </div>
 </header>
